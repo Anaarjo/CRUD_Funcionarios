@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- O tittle aparece na aba do navegador, além de ser o título quando as pessoas buscam-->
+    <!--Criando o título -->
+    <title>CRUD</title>
+    <!--Importando o estilo -->
+    <link rel="stylesheet" href="style.css">
+    <!--Importando os ícones-->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!--Criando as divs, elas são usadas para armazenar/agrupar conteúdos-->
+    <!--Criando a div container, para acelerar esse processo basta digitar .nome_da_div 
+    neste caso eu utilizei .container -->
+    <div class="container">
+        <div class="header">
+
+            <!--span é usado como um container genêrico em linha para conteúdo fraseado-->
+
+            <!--openModal é uma função, quando o botão é clicado a função é executada-->
+
+            <!--Um modal popup é um elemento de página da web que exibe informações adicionais
+             ou não relacionadas sobre a página atual, sem recarregá-la.-->
+
+
+            <span>Cadastro de Pessoas</span>
+            <button onclick="openModal()" id="new">Adicionar</i></button>
+        </div>
+
+        <div class="divTable">
+            <!--A tag <table> é usada para criar tabelas-->
+            <table>
+                  <!--A tag <thead> é usada para definir diferentes partes da tabela-->
+                <thead>
+                     <!--A tag <tr> determina o número de linhas da tabela (rows)-->
+                    <tr>
+                         <!--A tag <th> é usada para definir os nomes das colunas-->
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th class="acao">Editar</th>
+                        <th class="acao">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="modal-container">
+            <div class="modal">
+                <!--Criação do formulário-->
+                <form>
+                    <!--Label é o título e input é o valor a ser armazenado-->
+                    <label for="m-nome">Nome</label>
+                    <input id="m-nome" type="text" required />
+                    <!--id serve para identificar o elemento e o type é o tipo de valor-->
+
+                    <label for="m-idade">Idade</label>
+                    <input id="m-idade" type="number" required />
+                     <!--Criação do botão de salvar-->
+                    <button id="btnSalvar">Salvar</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+     <!--Importando o script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

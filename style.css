@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+/*Definições para o corpo do site */
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.1);
+}
+/*Tipo de cursor */
+button {
+  cursor: pointer;
+}
+/*Definições para o fundo */
+.container {
+  width: 90%;
+  height: 80%;
+  border-radius: 10px;
+  background: rgb(153, 145, 196);
+}
+.header {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto 12px;
+}
+
+/*Aqui está o título - Cadastro de pessoas */
+.header span {
+  font-weight: 900;
+  font-size: 20px;
+  word-break: break-all;
+}
+/*Botão de adicionar */
+#new {
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: rgb(57, 57, 226);
+}
+/*Tabela a qual serão armazenadas as informações */
+.divTable {
+  width: auto; 
+  height:inherit; 
+  overflow:auto;
+}
+/*O fundo do scrollbar */
+.divTable::-webkit-scrollbar {
+  width: 12px;
+  background-color: rgb(208, 190, 216); 
+}
+/*Definições do scrollbar */
+.divTable::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(102, 78, 238); 
+}
+/*Estilização da tabela */
+table {
+  width: 100%;
+  border-spacing: 10px;
+  word-break: break-all;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: whitesmoke;
+}
+/*Criação da linha para dividir as informações */
+tr {
+  border-bottom: 1px solid rgb(238, 235, 235)!important;
+}
+/*Estilização do corpo da tabela linhas e colunas */
+tbody tr td {
+  vertical-align: text-top;
+  padding: 4px;
+  max-width: 30px;
+}
+
+thead tr th {
+  padding: 5px;
+  text-align: start;
+  margin-bottom: 30px;
+}
+
+tbody tr {
+  margin-bottom: 30px;
+}
+
+thead tr th.acao {
+  width: 100px!important;
+  text-align: center;
+}
+
+tbody tr td.acao {
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 10px;
+  }
+  
+  .header span {
+    font-size: 15px;
+  }
+/*Estilização do botão de adicionar  */
+  #new {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  thead tr th.acao {
+    width: auto!important;
+  }
+  
+  td button i {
+    font-size: 20px!important;
+  }
+
+  td button i:first-child {
+    margin-right: 0;
+  }
+/*Estilização do modal */
+  .modal {
+    width: 90%!important;
+  }
+/*Estilização do label do modal definindo o tamanho da fonte */
+  .modal label {
+    font-size: 12px!important;
+  }
+}
+
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: 50%;
+}
+/*Estilização do label do modal definindo o tamanho da fonte */
+.modal label {
+  font-size: 14px;
+  width: 100%;
+}
+
+.modal input {
+  width: 100%;
+  outline: none;
+  padding: 5px 10px; 
+  width: 100%;
+  margin-bottom: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.modal button {
+  width: 100%;
+  margin: 10px auto;
+  outline: none;
+  border-radius: 20px; 
+  padding: 5px 10px; 
+  width: 100%;
+  border: none;
+  background-color: rgb(57, 57, 226);
+  color: rgb(215, 210, 221);
+}
+
+.active {
+  display: flex;
+}
+
+.active .modal {
+  animation: modal .4s;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+td button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/*Define o tamanho dos ícones */
+td button i {
+  font-size: 25px;
+}
+
+
+/*Aqui reduz o espaço entre os ícones */
+td button i:first-child {
+  margin-right: 5px;
+}
+
+td button i:last-child {
+  margin-left: 5px;
+}
